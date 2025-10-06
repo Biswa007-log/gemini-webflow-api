@@ -7,7 +7,7 @@ export default async function handler(req, res) {
   if (!prompt) return res.status(400).json({ error: 'No prompt provided' });
 
   try {
-    const response = await fetch('https://api.gemini.com/v1/generate', { 
+    const response = await fetch('https://generativelanguage.googleapis.com/v1/models/gemini-1.5-pro/generateContent', { 
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
